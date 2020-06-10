@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.author.body
+    - field.field.node.author.field_designation
+    - field.field.node.author.field_email_address
+    - field.field.node.author.field_profile_photo
+    - image.style.profile_photo
+    - node.type.author
+  module:
+    - image
+    - user
+id: node.author.teaser
+targetEntityType: node
+bundle: author
+mode: teaser
+content:
+  field_email_address:
+    type: email_mailto
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_profile_photo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: profile_photo
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_designation: true
+  links: true

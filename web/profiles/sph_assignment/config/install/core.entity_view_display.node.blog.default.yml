@@ -1,0 +1,104 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.body
+    - field.field.node.blog.field_byline
+    - field.field.node.blog.field_keywords
+    - field.field.node.blog.field_photo
+    - image.style.blog_photo
+    - node.type.blog
+  module:
+    - slick
+    - text
+    - user
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_byline:
+    weight: 1
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_keywords:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_photo:
+    weight: 2
+    label: hidden
+    settings:
+      style: ''
+      optionset: default
+      optionset_thumbnail: ''
+      skin: ''
+      skin_thumbnail: ''
+      image_style: blog_photo
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      thumbnail_style: ''
+      ratio: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      view_mode: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      box_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+    third_party_settings: {  }
+    type: slick_image
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

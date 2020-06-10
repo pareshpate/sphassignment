@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: blog_photo
+label: 'Blog Photo'
+description: 'Blog Photo'
+aspect_ratio: '3:2'
+soft_limit_width: 450
+soft_limit_height: 300
+hard_limit_width: null
+hard_limit_height: null

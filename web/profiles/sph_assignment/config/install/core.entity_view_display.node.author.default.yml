@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.author.body
+    - field.field.node.author.field_designation
+    - field.field.node.author.field_email_address
+    - field.field.node.author.field_profile_photo
+    - image.style.profile_photo
+    - node.type.author
+  module:
+    - image
+    - text
+    - user
+id: node.author.default
+targetEntityType: node
+bundle: author
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_designation:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_email_address:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_profile_photo:
+    weight: 105
+    label: above
+    settings:
+      image_style: profile_photo
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
